@@ -4,8 +4,11 @@ s.reboot;
 Speech.setSpeechPitch(0, 200);
 
 (
-OSCdef('speak', {
+OSCdef('speakLyric', {
 	arg msg;
-	'i tried'.postln;
-}, "speak");
+	"Word:".postln;
+	msg[1].asSymbol.postln;
+	"Pitch:".postln;
+	msg[2].asSymbol.postln;
+}, "speakLyric");
 )

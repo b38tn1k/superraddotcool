@@ -18,14 +18,13 @@ class PopgasmTester(App):
 
     def say_something(self, instance):
         scSpeak(self.words.text, self.pitch.text)
-        print "SPEAK!"
 
     def build(self):
 
         self.main_thing = BoxLayout(orientation="vertical")
 
-        self.words = TextInput(test='shit for the masses', multiline=False, font_size=30)
-        self.pitch = TextInput(test='pitch 0 - 127', multiline=False, font_size=30)
+        self.words = TextInput(hint_text='shit for the masses', multiline=False, font_size=30)
+        self.pitch = TextInput(hint_text='pitch 0 - 127', multiline=False, font_size=30)
 
         self.do_it = Button(text='Do It', font_size=30)
         self.do_it.bind(on_press=self.say_something)

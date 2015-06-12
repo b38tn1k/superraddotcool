@@ -105,7 +105,8 @@ def scSpeak(word, pitch):
     c = OSC.OSCClient()
     c.connect(('127.0.0.1', 57120))   # connect to SuperCollider
     oscmsg = OSC.OSCMessage()
-    oscmsg.setAddress("/speak")
-    # oscmsg.append("hi")
-    # oscmsg.append(200)
+    oscmsg.setAddress("/speakLyric")
+    oscmsg.append(str(word))
+    oscmsg.append(pitch)
+    print "SPEAK!"
     c.send(oscmsg)
