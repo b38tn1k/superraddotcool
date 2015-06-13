@@ -103,7 +103,7 @@ def quitSc():
 
 def scSpeak(word, pitch):
     c = OSC.OSCClient()
-    c.connect(('127.0.0.1', 57120))   # connect to SuperCollider
+    c.connect(('127.0.0.1', 57110))   # connect to SuperCollider
     oscmsg = OSC.OSCMessage()
     oscmsg.setAddress("/speakLyric")
     oscmsg.append(str(word))

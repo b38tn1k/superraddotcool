@@ -1,6 +1,11 @@
 s = Server.local;
 s.reboot;
+
+j = "this is a voice";
+j.speak;
+
 "this is a voice".speak;
+
 Speech.setSpeechPitch(0, 200);
 
 (
