@@ -1,0 +1,3 @@
+  #!/bin/sh
+  cd /Applications/SuperCollider/SuperCollider.app/Contents/Resources/
+  exec ./sclang $*
